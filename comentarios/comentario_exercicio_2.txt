@@ -1,0 +1,4 @@
+No exercício 2, utilizei uma lógica parecida com o exercício 1 na tratativa do json, com a diferença de trazer os tipos de dados como string para que ficassem no formato correto para a query.
+Sendo assim, trabalhei com a mesma classe json_schema que armazena o json em um objeto python e trata os dados como dicionário, obtendo as colunas a partir de "properties".
+Com isso, em json_schema_to_hive, fiz uma iteração que salvasse em uma lista cada coluna com seu respectivo tipo de dado. Por fim, criei a query atribuindo a variavel do nome da tabela (que coloquei como tabela_teste), e incluindo a lista de colunas com os respectivos tipos de dados, sempre seguidos de vírgula para o modelo correto de ingestão. Inclui o location deixado no script, por tratar-se de uma external table. Tentei seguir o que tem na documentação do AWS!
+Executando, ela libera a query.

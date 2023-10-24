@@ -1,0 +1,6 @@
+ 
+    if set(event_obj.keys()) == set(json_base_obj.keys()):    
+        for key, value in event_obj.items():
+            if type(value) == type(json_base_obj[key]):
+                send_event_to_queue(event, queue_name)
+             return f"O tipo de dado para a chave {key} está incorreto."

@@ -1,0 +1,8 @@
+Para o exercício 1, eu criei dois arquivos, o event_schema.py e o json_schema.py.
+No json_schema, trabalho com a classe json_schema para poder armazenar o json em um objeto, e tratar os dados dele através da coluna properties, retornando
+um dicionário com os nomes das colunas e os seus respectivos tipos de dados.
+No event_schema, utilizo a classe event_schema para poder tratar os dados que estarão armazenados na variável event, retornando também um dicionário com 
+os nomes das colunas e tipos de dados.
+Por fim, em event_validator, chamo as duas classes e aplico as funções para obter os dicionários e compará-los, levando a carga para a fila e executando a função send_event_to_queue 
+caso os dois dicionários sejam iguais.
+Caso não, uma mensagem de erro é printada.

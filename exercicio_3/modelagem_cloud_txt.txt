@@ -1,0 +1,9 @@
+Para a modelagem de dados, utilizei a plataforma AWS que tem sido a líder das plataformas de cloud, além de ter uma alta conectividade e didática. Para a recepção de eventos, pensei
+no Amazon S3, que pode também armazenar esse evento em um bucket, onde esse evento pode chegar direto por API. Com ele, também é possível configurar um SNS para notificar quando um novo arquivo chegar ao bucket.
+Assim, é possível receber as noificações de quando um novo arquivo chega.
+Para o data quality, pensei em um sistema serveless, como o AWS Lambda, que poderia processar a notificação SNS e executar o código Python para o Data Quality.
+Após isso, teremos a fila de eventos que passou no data quality. Para isso, usaremos o Amazon SQS. Após isso, pode-se ter o ETL, que pode ser feito através do Amazon Glue, que pode
+extrair os dados da fila, transformá-los e carregá-los no repositório de dados.
+Os dados armazenados tanto em bucket para backup quando em Amazon Redshift, podemos conectar as plataformas de data vis, machine learning e analytics.
+Para monitoramento, é importante usar o Amazon CloudWatch para monitorar os logs. Para o suporte e a garantia da qualidade dos dados, é importante usar o Amazon Glue Data
+Catalog para o catálogo dos dados.
